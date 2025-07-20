@@ -27,19 +27,17 @@ GeoCoCo is built on top of GeoGauss, which is a strongly consistent OLTP databas
 
 8. The next minute after the system receives the start command, the cluster starts to provide services.
 
-# Test
+# Reproduce GeoCoCo
 
 You need to create roles on each server and assign corresponding database permissions firstly,
 
 Log in to the database system through the role, and then create the relevant in-memory table.
 
-Later, you need to inject table data into the cluster through one machine, and the data will be synchronized to other machines.
+Later, you need to inject table data into the cluster through one machine, and the data will be synchronized to the other machines.
 
-GeoGauss provides a standard jdbc interface. For specific test methods, refer to openGauss-MOT.
+GeoCoCo will monitor network delay on the fly and generate the corresponding transmission schedule during synchronization.
 
 # openGauss
-
-English | [简体中文](./README.md)
 
 
 
